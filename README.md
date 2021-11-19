@@ -48,6 +48,10 @@ $ yarn start
   - Delete all submissions for `examId`
   Delete /exam/:examId/submissions
 
+## API testing
+There is a postman collection in the root directory.
+
+
 ## Stay in touch
 
 - Author - [Md Abdullahil Shafi](mailto:shafi.cse.buet@gmail.com)

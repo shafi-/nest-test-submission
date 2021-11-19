@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "94283754-a81a-4a9f-b99e-c299d3085e94",
+		"name": "TestReach.IO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "submit user answers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Projects/docspace/test-reach/test/sample.csv"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/exams/:examid/submissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"exams",
+						":examid",
+						"submissions"
+					],
+					"variable": [
+						{
+							"key": "examid",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get result",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"10\",\r\n            \"answerId\": \"3\"\r\n        },\r\n        {\r\n            \"questionId\": \"11\",\r\n            \"answerId\": \"2\"\r\n        },\r\n        {\r\n            \"questionId\": \"12\",\r\n            \"answerId\": \"4\"\r\n        },\r\n        {\r\n            \"questionId\": \"13\",\r\n            \"answerId\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/exams/:examid/result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"exams",
+						":examid",
+						"result"
+					],
+					"variable": [
+						{
+							"key": "examid",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete submissions by examId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"10\",\r\n            \"answerId\": \"3\"\r\n        },\r\n        {\r\n            \"questionId\": \"11\",\r\n            \"answerId\": \"2\"\r\n        },\r\n        {\r\n            \"questionId\": \"12\",\r\n            \"answerId\": \"4\"\r\n        },\r\n        {\r\n            \"questionId\": \"13\",\r\n            \"answerId\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/exams/:examid/submissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"exams",
+						":examid",
+						"submissions"
+					],
+					"variable": [
+						{
+							"key": "examid",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all submissions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"10\",\r\n            \"answerId\": \"3\"\r\n        },\r\n        {\r\n            \"questionId\": \"11\",\r\n            \"answerId\": \"2\"\r\n        },\r\n        {\r\n            \"questionId\": \"12\",\r\n            \"answerId\": \"4\"\r\n        },\r\n        {\r\n            \"questionId\": \"13\",\r\n            \"answerId\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/exams/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"exams",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
